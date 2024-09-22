@@ -1,0 +1,97 @@
+$ touch index.html      /////create new file
+$ touch app.js
+$ git init              ///get initialized
+Initialized empty Git repository in C:/Users/yukiw/OneDrive/Desktop/git/.git/
+
+yukiw@Yuki MINGW64 ~/OneDrive/Desktop/git (main)
+$ git config --global user.name 'Yu Wang'            ///set information
+
+yukiw@Yuki MINGW64 ~/OneDrive/Desktop/git (main)
+$ git config --global user.email 'u6039205@utah.edu'
+
+yukiw@Yuki MINGW64 ~/OneDrive/Desktop/git (main)
+$ git add index.html                              ///add file into git environment
+
+
+yukiw@Yuki MINGW64 ~/OneDrive/Desktop/git (main)
+$ git status                                      //check the git environment status (which file is added into)
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        New Text Document.txt
+        app.js
+
+
+yukiw@Yuki MINGW64 ~/OneDrive/Desktop/git (main)
+$ git rm --cached index.html                              ///remove file
+rm 'index.html'
+
+yukiw@Yuki MINGW64 ~/OneDrive/Desktop/git (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        New Text Document.txt
+        app.js
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+yukiw@Yuki MINGW64 ~/OneDrive/Desktop/git (main)
+$ git add *.html                                 ///add all html
+
+yukiw@Yuki MINGW64 ~/OneDrive/Desktop/git (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        New Text Document.txt
+        app.js
+
+
+yukiw@Yuki MINGW64 ~/OneDrive/Desktop/git (main)
+$ git add .                                      //add all files in environments
+
+yukiw@Yuki MINGW64 ~/OneDrive/Desktop/git (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   New Text Document.txt
+        new file:   app.js
+        new file:   index.html
+
+
+yukiw@Yuki MINGW64 ~/OneDrive/Desktop/git (main)
+
+$ git commit       ///commit your information--click i can editor and if you want to exist, click esc and type  :wq--you can finish commit
+
+////you can skip the above stage by use some command
+$ git commit -m 'i change the js'
+
+
+/////////use ignore file
+$ touch .gitignore
+$ touch log.txt   ---write log.txt into .gitignore and then you won't add this file in your git file (can also write /dir1 or *.txt in .gitignore--they won't be added into new files)
+$ add .
+$ git status ---you won't find log.txt
